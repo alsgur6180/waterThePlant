@@ -2,11 +2,13 @@ package kr.ac.konkuk.watertheplant;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -14,23 +16,43 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    static final int ADD = 1;
+    static final int MODIFY = 2;
+    static final int DELETE = 3;
+    ListView listView;
     ArrayList<SampleData> plantDataList;
-
+    MyAdapter myAdapter;
+    EditText editDelete;
+    Button add;
+    Button delete;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.InitializeMovieData();
+        listView = (ListView)findViewById(R.id.listView);
+        editDelete = (EditText)findViewById(R.id.edit_delete);
+        add = (Button)findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener() {
+            // @Override
+            public void onClick(View arg0) {
+
+            }
+        });
+        delete = (Button)findViewById(R.id.delete);
+        delete.setOnClickListener(new View.OnClickListener() {
+            // @Override
+            public void onClick(View arg0) {
+                int deleteIndex = Integer.parseInt(editDelete.getText().toString());
+                plantDataList.remove(deleteIndex);
+                myAdapter = new MyAdapter(MainActivity.this, plantDataList);
+
+                listView.setAdapter(myAdapter);
+            }
+        });
 
 
-        Button add = (Button)findViewById(R.id.add);
-        Button modify = (Button)findViewById(R.id.modify);
-        Button delete = (Button)findViewById(R.id.delete);
-
-
-        ListView listView = (ListView)findViewById(R.id.listView);
-        final MyAdapter myAdapter = new MyAdapter(this, plantDataList);
+        myAdapter = new MyAdapter(this, plantDataList);
 
         listView.setAdapter(myAdapter);
 

@@ -3,11 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="395dp"
+        android:choiceMode="singleChoice" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         >
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number">
+
+        </EditText>
+        <EditText
+            android:id="@+id/edit_summer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number">
+
+        </EditText>
+        <EditText
+            android:id="@+id/edit_winter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number">
+
+        </EditText>
         <Button
             android:id="@+id/add"
             android:layout_width="match_parent"
@@ -15,13 +44,21 @@
             android:text="추가"
             android:layout_weight="1">
         </Button>
-        <Button
-            android:id="@+id/modify"
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/edit_delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="수정"
-            android:layout_weight="1">
-        </Button>
+            android:layout_weight="1"
+            android:inputType="number">
+
+        </EditText>
         <Button
             android:id="@+id/delete"
             android:layout_width="match_parent"
@@ -29,13 +66,9 @@
             android:text="삭제"
             android:layout_weight="1">
         </Button>
-
     </LinearLayout>
 
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="395dp"
-        android:choiceMode="singleChoice" />
+
+
 </LinearLayout>
