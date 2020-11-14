@@ -16,13 +16,16 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    static final int ADD = 1;
-    static final int MODIFY = 2;
-    static final int DELETE = 3;
     ListView listView;
     ArrayList<SampleData> plantDataList;
     MyAdapter myAdapter;
     EditText editDelete;
+    EditText editName;
+    EditText editSummer;
+    EditText editWinter;
+//    RadioButton plant1;
+//    RadioButton plant2;
+//    RadioButton plant3;
     Button add;
     Button delete;
     @Override
@@ -32,11 +35,24 @@ public class MainActivity extends AppCompatActivity {
         this.InitializeMovieData();
         listView = (ListView)findViewById(R.id.listView);
         editDelete = (EditText)findViewById(R.id.edit_delete);
+        editName = (EditText)findViewById(R.id.edit_name);
+        editSummer = (EditText)findViewById(R.id.edit_summer);
+        editWinter = (EditText)findViewById(R.id.edit_winter);
+//        plant1 = (RadioButton)findViewById(R.id.radioButton_plant1);
+//        plant2 = (RadioButton)findViewById(R.id.radioButton_plant2);
+//        plant3 = (RadioButton)findViewById(R.id.radioButton_plant3);
+
         add = (Button)findViewById(R.id.add);
         add.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View arg0) {
+                String name = editName.getText().toString();
+                String summer = editSummer.getText().toString();
+                String winter = editWinter.getText().toString();
+                plantDataList.add(new SampleData(R.drawable.plant1,name,summer,winter));
+                myAdapter = new MyAdapter(MainActivity.this, plantDataList);
 
+                listView.setAdapter(myAdapter);
             }
         });
         delete = (Button)findViewById(R.id.delete);

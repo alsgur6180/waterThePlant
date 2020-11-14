@@ -3,11 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="395dp"
-        android:choiceMode="singleChoice" />
+        android:layout_height="275dp">
+
+    </ListView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,24 +20,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number">
-
+            android:inputType="text">
         </EditText>
         <EditText
             android:id="@+id/edit_summer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number">
-
+            android:inputType="text">
         </EditText>
         <EditText
             android:id="@+id/edit_winter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number">
-
+            android:inputType="text">
         </EditText>
         <Button
             android:id="@+id/add"
@@ -66,9 +65,8 @@
             android:text="삭제"
             android:layout_weight="1">
         </Button>
+
     </LinearLayout>
-
-
 
 
 </LinearLayout>
