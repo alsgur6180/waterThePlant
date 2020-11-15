@@ -15,26 +15,30 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+
         <EditText
             android:id="@+id/edit_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="text">
+            android:inputType="text"
+            android:hint="화초 이름">
         </EditText>
         <EditText
             android:id="@+id/edit_summer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="text">
+            android:inputType="text"
+            android:hint="물주는 주기(여름)">
         </EditText>
         <EditText
             android:id="@+id/edit_winter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="text">
+            android:inputType="text"
+            android:hint="물주는 주기(겨울)">
         </EditText>
         <Button
             android:id="@+id/add"
@@ -55,7 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number">
+            android:inputType="number"
+            android:hint="위에서부터 0번">
 
         </EditText>
         <Button
