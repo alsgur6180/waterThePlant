@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="275dp"
-        android:layout_weight="5">
-    </ListView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,23 +12,22 @@
         android:orientation="horizontal"
         android:layout_weight="1"
         android:layout_gravity="bottom">
+        <EditText
+            android:id="@+id/edit_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="위에서부터 0번">
+
+        </EditText>
         <Button
-            android:id="@+id/to_delete"
+            android:id="@+id/delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="삭제"
             android:layout_weight="1">
         </Button>
-        <Button
-            android:id="@+id/to_add"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="추가"
-            android:layout_weight="1">
-        </Button>
 
     </LinearLayout>
-
-
-
 </LinearLayout>

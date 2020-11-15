@@ -1,4 +1,4 @@
-package kr.ac.konkuk.watertheplant;
+package kr.ac.konkuk.watertheplanttest;
 
 public class SampleData {
     private int picture;

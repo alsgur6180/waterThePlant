@@ -1,4 +1,4 @@
-package kr.ac.konkuk.watertheplant;
+package kr.ac.konkuk.watertheplanttest;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,9 +15,9 @@ public class MyAdapter extends BaseAdapter {
 
     Context mContext = null;
     LayoutInflater mLayoutInflater = null;
-    ArrayList<SampleData> sample;
+    ArrayList<kr.ac.konkuk.watertheplanttest.SampleData> sample;
 
-    public MyAdapter(Context context, ArrayList<SampleData> data) {
+    public MyAdapter(Context context, ArrayList<kr.ac.konkuk.watertheplanttest.SampleData> data) {
         mContext = context;
         sample = data;
 
@@ -35,7 +35,7 @@ public class MyAdapter extends BaseAdapter {
     }
 
     @Override
-    public SampleData getItem(int position) {
+    public kr.ac.konkuk.watertheplanttest.SampleData getItem(int position) {
         return sample.get(position);
     }
 
